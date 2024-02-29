@@ -6,6 +6,7 @@ import com.automation.pages.BasePage;
 import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -53,7 +54,7 @@ public class RecipeListPage extends BasePage {
             waitForDisplayed(recipeListPageElements.addToMealPlanButton, 10);
             recipeListPageElements.addToMealPlanButton.isDisplayed();
             return true;
-        } catch (NoSuchElementException | ElementNotFoundException e) {
+        } catch (NoSuchElementException | ElementNotInteractableException e) {
             return false;
         }
     }
@@ -62,7 +63,7 @@ public class RecipeListPage extends BasePage {
         try {
             recipeListPageElements.removeRecipeFromMealPlanButton.isDisplayed();
             return true;
-        } catch (NoSuchElementException | ElementNotFoundException e) {
+        } catch (NoSuchElementException | ElementNotInteractableException e) {
             return false;
         }
     }

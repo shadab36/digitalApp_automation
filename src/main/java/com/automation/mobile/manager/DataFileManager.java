@@ -24,13 +24,15 @@ public class DataFileManager {
     private String platformName;
 
     public DataFileManager(String fileName, AppiumDevice appiumDevice){
+
         this.bannerName = appiumDevice.getBanner();
 
         this.environment = appiumDevice.getEnv();
 
         this.platformName = appiumDevice.getPlatform();
+       this.fileName = fileName+".yml";
+//        this.fileName = sign_in+".yml";
 
-        this.fileName = fileName+".yml";
     }
 
     public void read() throws FileNotFoundException {
@@ -45,7 +47,7 @@ public class DataFileManager {
         Map<String, Object> bannerData = (Map<String, Object>) data.get(bannerName);
 
         Map<String, Object> envData = (Map<String, Object>) bannerData.get(environment);
-
+        System.out.println("envDataTest"+envData);
         setStringData(envData);
     }
 
@@ -54,7 +56,8 @@ public class DataFileManager {
         Map<String, String> testData = new HashMap<>();
 
         if(data!=null){
-            for (Map.Entry<String, Object> entry : data.entrySet()) {
+
+                  for (Map.Entry<String, Object> entry : data.entrySet()) {
                 if(entry.getValue() instanceof Map) {
                     if (entry.getKey().equalsIgnoreCase(platformName.toLowerCase())) {
 
@@ -70,12 +73,12 @@ public class DataFileManager {
                 }
             }
         }
-
+    System.out.println("testData"+testData);
         this.testCaseData.set(testData);
     }
 
     public Map<String, String> getTestCaseData(){
-
+    System.out.println("testCaseData.get("+testCaseData.get());
         return testCaseData.get();
     }
 }

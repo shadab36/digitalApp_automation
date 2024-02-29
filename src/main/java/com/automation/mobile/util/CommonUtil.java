@@ -1,15 +1,13 @@
 package com.automation.mobile.util;
 
+
 import com.automation.mobile.appium.AppiumDevice;
-import com.automation.mobile.appium.AppiumDriverManager;
 import com.automation.mobile.entities.FileLocations;
 import com.automation.mobile.entities.MobileConfType;
+import com.perfectomobile.httpclient.utils.FileUtils;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.io.FileHandler;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CommonUtil {
-    static public String captureScreenshot(AppiumDevice device, AppiumDriver driver) throws IOException {
+    static public String captureScreenshot(AppiumDevice device, AppiumDriver driver) throws IOException, IOException {
         String banner = device.getBanner();
         String deviceName = device.getConfigureData(MobileConfType.DEVICE_NAME);
         String currentDate = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());

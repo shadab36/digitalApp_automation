@@ -16,6 +16,7 @@ public class AppiumDevice {
     }
 
     public String getConfigureData(String configureName) {
+    System.out.println("appiumDeviceData.get(configureName)"+appiumDeviceData.get(configureName));
         return appiumDeviceData.get(configureName);
     }
 

@@ -16,4 +16,5 @@ public class ConfigFileManager {
         String mobileFilePath = new FileLocations().getMobileConfigPath(mobileDevice);
         return new FileManager(mobileFilePath).getPropertyInMap();
     }
+
 }

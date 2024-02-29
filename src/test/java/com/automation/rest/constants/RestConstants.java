@@ -6,7 +6,6 @@ public class RestConstants {
             System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\";
 
 
-
     public enum PushNotificationData {
 
         PUSH_NOTIFICATION_DATA_ANDROID {

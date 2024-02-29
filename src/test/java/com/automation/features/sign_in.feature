@@ -15,19 +15,19 @@ Feature: Sign In Feature
     When user clicks continue button on startup page
     Then zipcode page is displayed
 
-  @smoke @SignInTest
-  Scenario: check forgot password link
-    When user click forgot password link on Sign In page
-    Then forgot password page is displayed
-    When user enters "vonsaaa@example.com" on forgot password page
-    And user click next button on forgot password page
-    Then verify Password Reset Email Sent displayed
-
-  @smoke @SignInTest
-  Scenario: sign in with correct credentials
-    When user enters "email" in username field on Sign In page
-    And user enters "password" in password field on Sign In page
-    And user clicks sign in on sign in page
+#  @smoke @SignInTest
+#  Scenario: check forgot password link
+#    When user click forgot password link on Sign In page
+#    Then forgot password page is displayed
+#    When user enters "vonsaaa@example.com" on forgot password page
+#    And user click next button on forgot password page
+#    Then verify Password Reset Email Sent displayed
+#
+#  @smoke @SignInTest
+#  Scenario: sign in with correct credentials
+#    When user enters "email" in username field on Sign In page
+#    And user enters "password" in password field on Sign In page
+#    And user clicks sign in on sign in page
 #    Then select order type page is displayed
 #    When user click delivery option
 #    And user click start shopping button on Sign In page

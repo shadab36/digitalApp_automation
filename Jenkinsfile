@@ -13,10 +13,10 @@ generalPurposePipeline(
                 defaultValue: 'parallel'
         ),
     	choice(
-                choices: 'ipad\niphoneXR\npixel3', 
+                choices: 'android\oneplus',
                 description: "Select device", 
                 name: 'DEVICE',
-                defaultValue: 'pixel3'
+                defaultValue: 'oneplus'
         ),
         choice(
             	choices: 'albertsons\ntomthumb\nsafeway', 
@@ -32,7 +32,7 @@ generalPurposePipeline(
         ),
         string(
         		name: 'CUCUMBER_OPTIONS', 
-        		defaultValue: 'src/test/resources/Mobile/new/share_location.feature'
+        		defaultValue: 'src/test/resources/Mobile/features'
         )
     ]
 ]) {

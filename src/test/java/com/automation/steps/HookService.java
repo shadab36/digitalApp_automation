@@ -171,7 +171,7 @@ public class HookService {
       ThreadLocalHelper.featureName.set(featureName);
       dataFileManager.read();
       ThreadLocalHelper.testCaseData.set(dataFileManager.getTestCaseData());
-      System.out.println(dataFileManager.getTestCaseData().toString());
+      System.out.println("tets"+dataFileManager.getTestCaseData().toString());
     }
   }
 
